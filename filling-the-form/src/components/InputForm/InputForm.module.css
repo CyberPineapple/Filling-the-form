@@ -1,0 +1,23 @@
+.block {
+  background-color: rgb(243, 232, 212);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 2px ridge grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  min-height: 100vh;
+}
+
+.description {
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.button {
+  margin: auto;
+  width: 20%;
+}
