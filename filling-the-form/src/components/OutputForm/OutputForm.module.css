@@ -1,61 +1,65 @@
 .block {
-  background-color: rgb(243, 232, 212);
+  position: relative;
   display: flex;
+  padding: 1vw;
+  font-family: 'Trebuchet MS';
+  color: white;
+  z-index: 2;
+}
+
+.borderBlock {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  border: .3vw solid transparent;
+  border-image: linear-gradient(90deg,rgba(0, 0, 0, 0.678), rgba(255, 255, 255, 0.507));
+  border-image-slice: 1;
   flex-direction: column;
   padding: 20px;
-  border-left: 2px groove grey;
-  position: relative;
-  left: 50%;
-  top: 0;
-  width: 50%;
-  min-height: 100vh;
 }
 
 .nameBlock {
-  font-size: 24px;
-  width: 50%;
+  font-family: 'Trebuchet MS';
+  font-size: 1.8vw;
   position: absolute;
-  left: 0;
-  top: 30px;
-  padding-left: 30px;
+  left: 20px;
+  top: 20px;
 }
 
 .contacts {
-  top: 30px;
-  width: 50%;
+  top: 20px;
   position: absolute;
-  left: 50%;
+  right: 0;
   text-align: end;
   padding-right: 30px;
   font-size: 20px;
 }
 
+.contactsText {
+  font-size: 1.25vw;
+}
+
 .title {
-  font-size: 24px;
+  font-size: 1.7vw;
   font-weight: bold;
+  border-bottom: 0.2vw solid transparent;
+  border-image: linear-gradient(90deg,rgba(0, 0, 0, 0.678), rgba(255, 255, 255, 0.507));
+  border-image-slice: 1;
 }
 
-.summary {
-  text-transform: uppercase;
-  margin-top: 30%;
-  margin-bottom: 20px;
+.description {
+  margin-top: 200px;
 }
 
-.education {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.experience {
+.textBlock {
   text-transform: uppercase;
   margin-bottom: 20px;
-}
-
-.skills {
-  text-transform: uppercase;
 }
 
 .text {
+  font-size: 1vw;
   text-transform: none;
   margin-top: 10px;
 }
@@ -69,7 +73,22 @@
 .img {
   margin-left: 20px;
   margin-right: 20px;
-  width: 20px;
-  height: 20px;
+  height: 1.25vw;
+  width: 1.25vw;
+  border: 0.1vw solid white;
+  background-color: white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contactsImg {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 1.25vw;
+  width: 1.25vw;
+  border: 0.1vw solid white;
+  background-color: white;
+  border-radius: 50%;
+  object-position: center;
   object-fit: cover;
 }

@@ -24,10 +24,7 @@ export default class TextArea extends PureComponent {
           value={value}
           onChange={this.handleChange}
         />
-
-        <div className={styles.error}>
           {value.length > 0 && <div className={styles.img} />}
-        </div>
       </div>
     );
   }

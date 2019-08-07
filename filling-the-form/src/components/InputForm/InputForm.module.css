@@ -1,23 +1,34 @@
 .block {
-  background-color: rgb(243, 232, 212);
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border-right: 2px ridge grey;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
   min-height: 100vh;
+  z-index: 2;
 }
 
 .description {
   margin: auto;
   text-align: center;
-  font-size: 18px;
+  font-size: 1vw;
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  font-family: "Trebuchet MS";
+  color: white;
+  outline: none;
+  border: 0.1vw solid transparent;
+  transition: box-shadow 0.7s, border 0.7s;
+  border-radius: 30px;
+  background-color: rgba(128, 128, 128, 0.26);
   margin: auto;
-  width: 20%;
+  width: 30vw;
+}
+
+.button:hover {
+  border-color: lightblue;
+  box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
 }

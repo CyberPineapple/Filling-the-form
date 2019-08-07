@@ -7,7 +7,7 @@ import {
   validateTelephone,
   validateEmail,
   validateNumber
-} from "../../constants/validatesFunctions.jsx";
+} from "./Input/validatesFunctions.jsx";
 
 export default class InputForm extends PureComponent {
   handleClick = () => {
@@ -46,45 +46,44 @@ export default class InputForm extends PureComponent {
           name="Имя"
           value={firstName}
           onChangeValue={setFirstName}
-          onValidate={validateName}
+          renderProps={validateName}
         />
         <Input
           name="Фамилия"
           value={secondName}
           onChangeValue={setSecondName}
-          onValidate={validateName}
+          renderProps={validateName}
         />
         <Input
           name="Телефон"
           value={telephone}
           onChangeValue={setTelephone}
-          onValidate={validateTelephone}
+          renderProps={validateTelephone}
         />
         <Input
           name="Email"
           value={email}
           onChangeValue={setEmail}
-          onValidate={validateEmail}
+          renderProps={validateEmail}
         />
         <Input
           name="Город"
           value={city}
           onChangeValue={setCity}
-          onValidate={validateName}
+          renderProps={validateName}
         />
         <Input
           name="Улица"
           value={street}
           onChangeValue={setStreet}
-          onValidate={validateName}
+          renderProps={validateName}
         />
         <Input
           name="Дом"
           value={home}
           onChangeValue={setHome}
-          onValidate={validateNumber}
+          renderProps={validateNumber}
         />
-        {/* <InputAdress changeAdress={setAdress} value={adress} /> */}
         <TextArea name="Summary" onChangeValue={setSummary} value={summary} />
         <TextArea
           name="Education"

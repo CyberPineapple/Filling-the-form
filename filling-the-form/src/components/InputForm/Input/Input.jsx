@@ -7,7 +7,7 @@ export default class Input extends PureComponent {
     name: PropTypes.string,
     value: PropTypes.string,
     onChangeValue: PropTypes.func,
-    onValidate: PropTypes.func
+    renderProps: PropTypes.func
   };
 
   changeValue = event => {
@@ -16,7 +16,7 @@ export default class Input extends PureComponent {
   };
 
   render() {
-    const { name, value, onValidate } = this.props;
+    const { name, value, renderProps } = this.props;
     return (
       <div className={styles.block}>
         <p className={styles.text}>{name}</p>
@@ -26,7 +26,7 @@ export default class Input extends PureComponent {
           onChange={this.changeValue}
           className={styles.input}
         />
-        <div className={styles.error}>{onValidate(value)}</div>
+        {renderProps(value)}
       </div>
     );
   }

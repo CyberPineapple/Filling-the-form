@@ -1,10 +1,12 @@
 .block {
+  font-family: "Trebuchet MS";
+  color: white;
   display: grid;
   width: 100%;
-  height: 160px;
-  grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 100%;
-  margin-top: 10px;
+  grid-template-areas: "title textarea image";
+  grid-template-columns: 8vw 1fr 2vw;
+  grid-gap: 0.3vw;
+  margin-bottom: 0.6vh;
 }
 
 .textarea::-webkit-scrollbar {
@@ -12,21 +14,30 @@
 }
 
 .textarea {
-  font-size: 20px;
+  height: 10vh;
+  grid-area: textarea;
+  font-family: "Trebuchet MS";
+  color: white;
+  border-radius: 30px;
+  padding: 0.7vh;
+  font-size: 1.1vw;
   outline: none;
-  border: 2px solid lightslategrey;
-  background-color: transparent;
-  transition: 0.5s border;
+  background-color: rgba(128, 128, 128, 0.26);
+  border: 0.1vw solid transparent;
+  transition: box-shadow 0.7s, border 0.7s;
   resize: none;
-  padding: 5px;
 }
 
 .textarea:focus {
-  border: 2px solid lightcoral;
+  border-color: lightblue;
+  box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
 }
 
 .text {
-  font-size: 20px;
+  grid-area: title;
+  display: flex;
+  margin: auto;
+  font-size: 1.3vw;
   font-weight: bold;
 }
 
@@ -36,8 +47,11 @@
 }
 
 .img {
-  height: 30px;
-  width: 30px;
+  grid-area: image;
+  display: flex;
+  margin: auto;
+  height: 1.7vw;
+  width: 1.7vw;
   background-image: url(../../../Images/Thank-You-compressed.png);
   background-size: contain;
   background-repeat: no-repeat;
