@@ -4,8 +4,8 @@
   display: grid;
   width: 100%;
   grid-template-areas:
-  'title input image'
-  'title error image';
+    "title input image"
+    "title error image";
   grid-template-columns: 8vw 1fr 2vw;
   grid-gap: 0.3vw;
 }

@@ -97,7 +97,9 @@ export default class OutputForm extends PureComponent {
                 </div>
                 <ul className={styles.list}>
                   {education.split(/;\n/).map(v => (
-                    <li key={v} className={styles.text}>{v}</li>
+                    <li key={v} className={styles.text}>
+                      {v}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -114,7 +116,9 @@ export default class OutputForm extends PureComponent {
                 </div>
                 <ul className={styles.list}>
                   {experience.split(/;\n/).map(v => (
-                    <li key={v} className={styles.text}>{v}</li>
+                    <li key={v} className={styles.text}>
+                      {v}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -131,7 +135,9 @@ export default class OutputForm extends PureComponent {
                 </div>
                 <ul className={styles.list}>
                   {skills.split(/;\n/).map(v => (
-                    <li key={v} className={styles.text}>{v}</li>
+                    <li key={v} className={styles.text}>
+                      {v}
+                    </li>
                   ))}
                 </ul>
               </div>

@@ -7,9 +7,14 @@ import {
   validateTelephone,
   validateEmail,
   validateNumber
-} from "./Input/validatesFunctions.jsx";
+} from "./Input/ValidatesFunctions.jsx";
+import PropTypes from "prop-types";
 
 export default class InputForm extends PureComponent {
+  static propTypes = {
+    onClearForm: PropTypes.func
+  };
+
   handleClick = () => {
     const { onClearForm } = this.props;
     onClearForm();

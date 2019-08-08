@@ -19,14 +19,21 @@ export const validateTelephone = value => {
   if (value.length > 0) {
     if (/^\+79/.test(value) || /^89/.test(value)) {
       if (/[^\d+]/.test(value)) {
-        return <p className={styles.error}>Поле должно содержать только числа</p>;
+        return (
+          <p className={styles.error}>Поле должно содержать только числа</p>
+        );
       } else if (/\+79\d{8}/.test(value) || /89\d{8}/.test(value)) {
         return <div className={styles.img} />;
       } else {
         return <p className={styles.error}>Некорректная длина</p>;
       }
     } else {
-      return <p className={styles.error}>Неверный формат номера, введите номер в формате +79**********, либо 89**********</p>;
+      return (
+        <p className={styles.error}>
+          Неверный формат номера, введите номер в формате +79**********, либо
+          89**********
+        </p>
+      );
     }
   } else {
     return null;
@@ -40,7 +47,11 @@ export const validateEmail = value => {
     } else if (/\S+@\S+\.\S+/.test(value)) {
       return <div className={styles.img} />;
     } else {
-      return <p className={styles.error}>Неправильный формат, введите в формате ***@***.***</p>
+      return (
+        <p className={styles.error}>
+          Неправильный формат, введите в формате ***@***.***
+        </p>
+      );
     }
   } else {
     return null;
