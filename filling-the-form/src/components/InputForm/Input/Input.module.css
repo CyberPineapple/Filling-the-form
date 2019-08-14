@@ -5,12 +5,14 @@
   width: 100%;
   grid-template-areas:
     "title input image"
-    "title error image";
+    "error error error";
   grid-template-columns: 8vw 1fr 2vw;
-  grid-gap: 0.3vw;
+  grid-template-rows: 50% 50%;
+  min-height: 8vh;
 }
 
 .input {
+  height: 4vh;
   grid-area: input;
   font-family: "Trebuchet MS";
   color: white;
@@ -18,37 +20,72 @@
   padding: 0.6vw;
   font-size: 1.1vw;
   background-color: rgba(128, 128, 128, 0.26);
+  border: 0.1vw solid lightblue;
+  box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
   outline: none;
-  transition: box-shadow 0.7s, border 0.7s;
-  border: 0.1vw solid transparent;
+  transition: box-shadow 0.7s, border 0.7s, background 0.7s;
 }
 
 .input:focus {
-  border-color: lightblue;
-  box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
+  border-color: rgb(98, 223, 48);
+  box-shadow: 6px 3px 136px 21px rgb(98, 223, 48);
 }
 
 .text {
-  grid-area: title;
   display: flex;
   margin: auto;
+  grid-area: title;
   font-size: 1.3vw;
   font-weight: bold;
 }
 
 .error {
+  z-index: 2;
+  height: 4vh;
   grid-area: error;
-  font-size: 1.1vw;
-  color: red;
+  font-size: 1vw;
+  color: rgb(253, 16, 16);
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+  display: flex;
+  align-items: center;
+  padding-left: 8vw;
 }
 
 .img {
   grid-area: image;
   display: flex;
   margin: auto;
+  margin-left: 1.1vw;
   height: 1.7vw;
   width: 1.7vw;
   background-image: url(../../../Images/Thank-You-compressed.png);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.textarea {
+  scrollbar-width: none;
+  height: 15vw;
+  grid-area: input;
+  font-family: "Trebuchet MS";
+  color: white;
+  border-radius: 30px;
+  padding: 1.5vh;
+  font-size: 1.1vw;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.26);
+  border: 0.1vw solid lightblue;
+  box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
+  transition: box-shadow 0.7s, border 0.7s;
+  resize: none;
+  margin-bottom: 4vh;
+}
+
+.textarea:focus {
+  border-color: rgb(98, 223, 48);
+  box-shadow: 6px 3px 136px 21px rgb(98, 223, 48);
 }

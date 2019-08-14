@@ -1,6 +1,6 @@
 export const initialState = {
-  firstName: localStorage.getItem("firstName") || "Alexander",
-  secondName: localStorage.getItem("secondName") || "Smirnov",
+  name: localStorage.getItem("name") || "Alexander",
+  surname: localStorage.getItem("surname") || "Smirnov",
   telephone: localStorage.getItem("telephone") || "+79647438901",
   email: localStorage.getItem("email") || "a.smirnov@mail.ru",
   city: localStorage.getItem("city") || "Saint-Petersburg",
@@ -22,6 +22,5 @@ export const initialState = {
     localStorage.getItem("skills") ||
     `Active sales, expansion of client base;
 Working with key clients, work with objections;
-Management sales team.
-    `
+Management sales team.`
 };

@@ -9,10 +9,14 @@
 .description {
   margin: auto;
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.1vw;
+  color: white;
+  margin-bottom: 4vh;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
 }
 
 .button {
+  cursor: pointer;
   font-size: 1vw;
   display: flex;
   justify-content: center;
@@ -21,15 +25,16 @@
   font-family: "Trebuchet MS";
   color: white;
   outline: none;
-  border: 0.1vw solid transparent;
+  border: 0.1vw solid lightblue;
+  background-color: rgba(128, 128, 128, 0.26);
+  box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
   transition: box-shadow 0.7s, border 0.7s;
   border-radius: 30px;
-  background-color: rgba(128, 128, 128, 0.26);
   margin: auto;
   width: 30vw;
 }
 
 .button:hover {
-  border-color: lightblue;
-  box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
+  border-color: rgb(98, 223, 48);
+  box-shadow: 6px 3px 136px 21px rgb(98, 223, 48);
 }

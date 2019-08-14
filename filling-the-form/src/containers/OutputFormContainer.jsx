@@ -5,8 +5,8 @@ import OutputForm from "../components/OutputForm/";
 class OutputFormContainer extends Component {
   render() {
     const {
-      firstName,
-      secondName,
+      name,
+      surname,
       telephone,
       email,
       summary,
@@ -19,8 +19,8 @@ class OutputFormContainer extends Component {
     } = this.props;
     return (
       <OutputForm
-        firstName={firstName}
-        secondName={secondName}
+        name={name}
+        surname={surname}
         telephone={telephone}
         email={email}
         summary={summary}
@@ -37,8 +37,8 @@ class OutputFormContainer extends Component {
 
 export default connect(
   state => ({
-    firstName: state.firstName,
-    secondName: state.secondName,
+    name: state.name,
+    surname: state.surname,
     telephone: state.telephone,
     email: state.email,
     summary: state.summary,
@@ -48,6 +48,5 @@ export default connect(
     city: state.city,
     street: state.street,
     home: state.home
-  }),
-  null
+  })
 )(OutputFormContainer);

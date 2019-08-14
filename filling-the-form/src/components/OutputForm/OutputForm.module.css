@@ -5,6 +5,17 @@
   font-family: "Trebuchet MS";
   color: white;
   z-index: 2;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+.summary {
+  position: relative;
+  display: flex;
+  padding: 1vw;
+  font-family: "Trebuchet MS";
+  color: white;
+  z-index: 2;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
 }
 
 .borderBlock {

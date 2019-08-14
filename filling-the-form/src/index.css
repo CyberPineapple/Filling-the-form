@@ -20,7 +20,7 @@
   height: 100%;
   background-image: url(./Images/rainbow_texture679.jpg);
   background-size: cover;
-  filter: blur(8px);
+  filter: blur(8px) brightness(70%);
 }
 
 button {
