@@ -4,49 +4,20 @@ import OutputForm from "../components/OutputForm/";
 
 class OutputFormContainer extends Component {
   render() {
-    const {
-      name,
-      surname,
-      telephone,
-      email,
-      summary,
-      education,
-      skills,
-      experience,
-      city,
-      street,
-      home
-    } = this.props;
-    return (
-      <OutputForm
-        name={name}
-        surname={surname}
-        telephone={telephone}
-        email={email}
-        summary={summary}
-        education={education}
-        experience={experience}
-        skills={skills}
-        city={city}
-        street={street}
-        home={home}
-      />
-    );
+    return <OutputForm {...this.props} />;
   }
 }
 
-export default connect(
-  state => ({
-    name: state.name,
-    surname: state.surname,
-    telephone: state.telephone,
-    email: state.email,
-    summary: state.summary,
-    education: state.education,
-    experience: state.experience,
-    skills: state.skills,
-    city: state.city,
-    street: state.street,
-    home: state.home
-  })
-)(OutputFormContainer);
+export default connect(state => ({
+  name: state.fields.name.value,
+  surname: state.fields.surname.value,
+  telephone: state.fields.telephone.value,
+  email: state.fields.email.value,
+  summary: state.fields.summary.value,
+  education: state.fields.education.value,
+  experience: state.fields.experience.value,
+  skills: state.fields.skills.value,
+  city: state.fields.city.value,
+  street: state.fields.street.value,
+  home: state.fields.home.value
+}))(OutputFormContainer);

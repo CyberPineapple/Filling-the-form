@@ -6,24 +6,25 @@ export const rootReducer = (state = initialState, action) => {
   switch (type) {
     case CLEAR_FORM: {
       localStorage.clear();
+      const newValuesForm = {...state.fields};
+      for (let key in newValuesForm) {
+        newValuesForm[key].value = ''
+      }
       return {
         ...state,
-        name: "",
-        surname: "",
-        telephone: "",
-        email: "",
-        city: "",
-        street: "",
-        home: "",
-        summary: "",
-        education: "",
-        experience: "",
-        skills: ""
+        fields: {
+          ...newValuesForm}
+        }
       };
-    }
     case CHANGE_VALUE: {
-      localStorage.setItem(Object.keys(payload)[0], Object.values(payload)[0]);
-      return { ...state, ...payload };
+      localStorage.setItem(payload.title, payload.value);
+      return {
+        ...state,
+        fields: {
+          ...state.fields,
+          [payload.title]: { ...state.fields[payload.title], ...payload }
+        }
+      };
     }
     default:
       return state;

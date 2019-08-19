@@ -4,15 +4,15 @@
   padding: 20px;
   min-height: 100vh;
   z-index: 2;
+  align-items: center;
 }
 
 .description {
-  margin: auto;
   text-align: center;
   font-size: 1.1vw;
   color: white;
-  margin-bottom: 4vh;
   text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+  margin-bottom: 4vh;
 }
 
 .button {
@@ -30,7 +30,6 @@
   box-shadow: 6px 3px 136px 21px rgba(17, 180, 158, 0.8);
   transition: box-shadow 0.7s, border 0.7s;
   border-radius: 30px;
-  margin: auto;
   width: 30vw;
 }
 

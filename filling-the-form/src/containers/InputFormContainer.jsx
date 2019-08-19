@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { changeValueAction, clearFormAction } from "../actions/";
+import { changeFormFieldAction, clearFormAction } from "../actions/";
 import InputForm from "../components/InputForm/";
 
 class InputFormContainer extends Component {
   render() {
-    const { nameList, clearForm, changeValue } = this.props;
+    const { inputFieldList, clearForm, changeValue } = this.props;
     return (
       <InputForm
-        nameList={nameList}
+        inputFieldList={inputFieldList}
         onClearForm={clearForm}
         changeValue={changeValue}
       />
@@ -18,10 +18,10 @@ class InputFormContainer extends Component {
 
 export default connect(
   state => ({
-    nameList: state
+    inputFieldList: state.fields
   }),
   {
     clearForm: clearFormAction,
-    changeValue: changeValueAction
+    changeValue: changeFormFieldAction
   }
 )(InputFormContainer);

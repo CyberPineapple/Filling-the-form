@@ -54,8 +54,7 @@
 .img {
   grid-area: image;
   display: flex;
-  margin: auto;
-  margin-left: 1.1vw;
+  margin: auto auto auto 1.1vw;
   height: 1.7vw;
   width: 1.7vw;
   background-image: url(../../../Images/Thank-You-compressed.png);

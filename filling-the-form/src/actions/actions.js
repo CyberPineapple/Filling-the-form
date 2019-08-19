@@ -4,7 +4,7 @@ export const clearFormAction = () => ({
   type: CLEAR_FORM
 });
 
-export const changeValueAction = (value, name) => ({
+export const changeFormFieldAction  = (value, title) => ({
   type: CHANGE_VALUE,
-  payload: { [name]: value }
+  payload: { title, value}
 });

@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 
 export default class Input extends PureComponent {
   handleChange = event => {
-    const { onChangeValue } = this.props;
-    onChangeValue(event.target.value, this.props.name);
+    const { onChangeValue, name } = this.props;
+    onChangeValue(event.target.value, name);
   };
 
-  setInput = () => {
+  setInputField = () => {
     const { inputType, value, onValidate } = this.props;
     switch (inputType) {
       case "input": {
@@ -22,7 +22,7 @@ export default class Input extends PureComponent {
               onChange={this.handleChange}
               className={styles.input}
             />
-            {error === true ? (
+            {error === 'success' ? (
               <div className={styles.img} />
             ) : (
               <p className={styles.error}>{error}</p>
@@ -52,7 +52,7 @@ export default class Input extends PureComponent {
     return (
       <div className={styles.block}>
         <p className={styles.text}>{name}</p>
-        {this.setInput()}
+        {this.setInputField()}
       </div>
     );
   }
