@@ -5,12 +5,12 @@ import InputForm from "../components/InputForm/";
 
 class InputFormContainer extends Component {
   render() {
-    const { inputFieldList, clearForm, changeValue } = this.props;
+    const { inputFieldList, clearForm, changeInputValue } = this.props;
     return (
       <InputForm
         inputFieldList={inputFieldList}
         onClearForm={clearForm}
-        changeValue={changeValue}
+        onChangeInputValue={changeInputValue}
       />
     );
   }
@@ -22,6 +22,6 @@ export default connect(
   }),
   {
     clearForm: clearFormAction,
-    changeValue: changeFormFieldAction
+    changeInputValue: changeFormFieldAction
   }
 )(InputFormContainer);

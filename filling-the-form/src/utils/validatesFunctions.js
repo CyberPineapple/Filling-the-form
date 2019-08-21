@@ -5,7 +5,7 @@ export const validateName = value => {
     } else if (/\s/.test(value)) {
       return "Поле не должно содержать пробелы";
     } else {
-      return 'success';
+      return "no error";
     }
   } else {
     return null;
@@ -18,7 +18,7 @@ export const validateTelephone = value => {
       if (/[^\d+]/.test(value)) {
         return "Поле должно содержать только числа";
       } else if (/\+79\d{8}/.test(value) || /89\d{8}/.test(value)) {
-        return 'success';
+        return "no error";
       } else {
         return "Некорректная длина";
       }
@@ -35,7 +35,7 @@ export const validateEmail = value => {
     if (/\s/.test(value)) {
       return "Поле не должно содержать пробелы";
     } else if (/\S+@\S+\.\S+/.test(value)) {
-      return 'success';
+      return "no error";
     } else {
       return "Неправильный формат, введите в формате ***@***.***";
     }
@@ -49,7 +49,7 @@ export const validateNumber = value => {
     if (/\D/.test(value)) {
       return "Поле должно содержать только числа";
     } else {
-      return 'success';
+      return "no error";
     }
   } else {
     return null;

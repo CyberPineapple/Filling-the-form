@@ -8,7 +8,7 @@ export default class Input extends PureComponent {
     onChangeValue(event.target.value, name);
   };
 
-  setInputField = () => {
+  getInputField = () => {
     const { inputType, value, onValidate } = this.props;
     switch (inputType) {
       case "input": {
@@ -22,7 +22,7 @@ export default class Input extends PureComponent {
               onChange={this.handleChange}
               className={styles.input}
             />
-            {error === 'success' ? (
+            {error === "no error" ? (
               <div className={styles.img} />
             ) : (
               <p className={styles.error}>{error}</p>
@@ -52,7 +52,7 @@ export default class Input extends PureComponent {
     return (
       <div className={styles.block}>
         <p className={styles.text}>{name}</p>
-        {this.setInputField()}
+        {this.getInputField()}
       </div>
     );
   }

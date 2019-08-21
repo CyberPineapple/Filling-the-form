@@ -3,7 +3,7 @@ import styles from "./InputForm.module.css";
 import Input from "./Input/";
 import PropTypes from "prop-types";
 
-const InputForm = ({ changeValue, inputFieldList, onClearForm }) => {
+const InputForm = ({ onChangeInputValue, inputFieldList, onClearForm }) => {
   return (
     <div className={styles.block}>
       {Object.values(inputFieldList).map(value => (
@@ -11,7 +11,7 @@ const InputForm = ({ changeValue, inputFieldList, onClearForm }) => {
           key={value.title}
           value={value.value}
           name={value.title}
-          onChangeValue={changeValue}
+          onChangeValue={onChangeInputValue}
           onValidate={value.validate}
           inputType={value.inputType}
         />
@@ -29,8 +29,8 @@ const InputForm = ({ changeValue, inputFieldList, onClearForm }) => {
 
 InputForm.propTypes = {
   onClearForm: PropTypes.func,
-  nameList: PropTypes.object,
-  changeValue: PropTypes.func
+  inputFieldList: PropTypes.object,
+  onChangeInputValue: PropTypes.func
 };
 
 export default InputForm;

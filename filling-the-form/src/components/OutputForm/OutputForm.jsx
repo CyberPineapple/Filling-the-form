@@ -1,9 +1,17 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import styles from "./OutputForm.module.css";
 import PropTypes from "prop-types";
-import {telephoneImage, emailImage, summaryImage, experienceImage, educationImage, adressImage, skillsImage} from '../../constants/imagesDescription';
+import {
+  telephoneImage,
+  emailImage,
+  summaryImage,
+  experienceImage,
+  educationImage,
+  adressImage,
+  skillsImage
+} from "../../constants/imagesDescription";
 
-export default class OutputForm extends PureComponent {
+export default class OutputForm extends Component {
   render() {
     const {
       name,

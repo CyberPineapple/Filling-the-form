@@ -6,23 +6,17 @@ export const rootReducer = (state = initialState, action) => {
   switch (type) {
     case CLEAR_FORM: {
       localStorage.clear();
-      const newValuesForm = {...state.fields};
-      for (let key in newValuesForm) {
-        newValuesForm[key].value = ''
-      }
-      return {
-        ...state,
-        fields: {
-          ...newValuesForm}
-        }
-      };
+      return { ...state, ...initialState };
+    }
     case CHANGE_VALUE: {
-      localStorage.setItem(payload.title, payload.value);
+      const { fields } = state;
+      const { title, value } = payload;
+      localStorage.setItem(title, value);
       return {
         ...state,
         fields: {
-          ...state.fields,
-          [payload.title]: { ...state.fields[payload.title], ...payload }
+          ...fields,
+          [title]: { ...fields[title], ...payload }
         }
       };
     }
