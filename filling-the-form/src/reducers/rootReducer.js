@@ -6,7 +6,7 @@ export const rootReducer = (state = initialState, action) => {
   switch (type) {
     case CLEAR_FORM: {
       localStorage.clear();
-      return { ...state, ...initialState };
+      return initialState;
     }
     case CHANGE_VALUE: {
       const { fields } = state;
